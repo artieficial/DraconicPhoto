@@ -19,7 +19,9 @@
     "build": "yarn webpack --mode production",
     "develop": "yarn webpack-dev-server --mode development",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b public",
+    "prestage": "yarn build",
+    "stage": "gh-pages -d dist -b staging"
   },
   "dependencies": {
     "html-webpack-plugin": "^5.6.8",
