@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 const App = () => {
-  return <header>Draconic Photo: Coming Soon</header>;
+  return <header>Draconic Photo: Staging</header>;
 };
 
 const container = document.getElementById('root');
