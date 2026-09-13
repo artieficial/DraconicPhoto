@@ -1,0 +1,47 @@
+{
+  "name": "draconicphoto",
+  "version": "1.0.0",
+  "description": "Portfolio website for Artemis dragon's photography portfolio under the name \"Draconic Photo\"",
+  "homepage": "https://github.com/artieficial/DraconicPhotoPortfolio#readme",
+  "bugs": {
+    "url": "https://github.com/artieficial/DraconicPhotoPortfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artieficial/DraconicPhotoPortfolio.git"
+  },
+  "license": "ISC",
+  "author": "Artemis Dragon",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn webpack --mode production",
+    "develop": "yarn webpack-dev-server --mode development",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.6.8",
+    "react": "^19.3.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.3",
+    "ts-loader": "^9.6.2",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "copy-webpack-plugin": "^14.0.0",
+    "css-loader": "^7.1.5",
+    "gh-pages": "^6.3.0",
+    "style-loader": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "webpack": "^5.110.3",
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.0.0",
+    "yarn": "^1.22.22"
+  }
+}
