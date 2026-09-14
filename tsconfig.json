@@ -10,7 +10,8 @@
         "paths": {
             "@/*": ["./src/*"],
             "@body/*": ["./src/components/body/*"],
-            "@header/*": ["./src/components/header/*"]
+            "@footer/*": ["./src/components/footer/*"],
+            "@header/*": ["./src/components/header/*"],
         }
     },
     "include": ["src"],

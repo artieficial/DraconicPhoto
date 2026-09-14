@@ -51,6 +51,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "assets/images", to: "assets/images" }, // Copy all files from src/assets to dist/assets
+        { from: "assets/css", to: "assets/css" }, // Copy all files from src/assets to dist/assets
       ],
     }),
     // new BundleAnalyzerPlugin({
