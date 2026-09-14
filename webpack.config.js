@@ -1,4 +1,5 @@
 const path = require("path");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
@@ -7,7 +8,8 @@ module.exports = {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: '[name].bundle.js', 
+    chunkFilename: '[name].chunk.js',
     clean: true,
   },
   module: {
@@ -51,5 +53,17 @@ module.exports = {
         { from: "assets/images", to: "assets/images" }, // Copy all files from src/assets to dist/assets
       ],
     }),
+    // new BundleAnalyzerPlugin({
+    //   analyzerMode: "static",
+    //   reportFilename: path.resolve(__dirname, "reports/report.html"),
+    //   generateStatsFile: true,
+    //   statsFilename: path.resolve(__dirname, "reports/stats.json"),
+    // }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  devtool: 'source-map'
 };
