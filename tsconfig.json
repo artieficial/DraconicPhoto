@@ -6,7 +6,12 @@
         "jsx": "react-jsx",
         "strict": true,
         "esModuleInterop": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "paths": {
+            "@/*": ["./src/*"],
+            "@body/*": ["./src/components/body/*"],
+            "@header/*": ["./src/components/header/*"]
+        }
     },
-    "include": ["src"]
+    "include": ["src"],
 }

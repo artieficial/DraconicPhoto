@@ -1,8 +1,13 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 
+import Navigation from '@header/navigation';
+import Placeholder from '@body/banner';
+
 const App = () => {
-  return <header>Draconic Photo: Coming Soon</header>;
+  return <div className="vh-100 d-flex flex-column">
+    <Navigation/>
+    <Placeholder/>
+  </div>;
 };
 
 const container = document.getElementById('root');
